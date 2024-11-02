@@ -45,6 +45,8 @@ Par exemple :(x1,x2,...,xn)
 
 Définition d'une matrice et son utilisation dans les calculs statistiques.
 
+
+
 ### Matrice avec Numpy
 
 Il y a plusieurs méthodes pour créer une matrice avec python :
@@ -65,6 +67,20 @@ E = np.arange(1,5).reshape(2,2)
 ### Définition d'une matrice
 
 Une matrice est une structure de données bidimensionnelle, disposés en lignes et colonnes.
+C'est donc une grille rectangulaire de nombres organisée en lignes et colonnes. Les matrices peuvent représenter des transformations linéaires, c'est-à-dire des opérations qui transforment un vecteur d'un espace vectoriel en un autre. Par exemple, une matrice \(A\) de dimensions \(m \times n\) peut transformer un vecteur \(x\) en un autre vecteur \(A x\).
+
+**Addition de matrices** : 
+\[
+A + B
+\]
+où \(A\) et \(B\) ont les mêmes dimensions.
+
+**Multiplication de matrices** :
+\[
+A B
+\]
+où le nombre de colonnes de \(A\) doit être égal au nombre de lignes de \(B\).
+
 
 En statistiques, elle peut représenter :
 
@@ -85,7 +101,7 @@ n'est possible que si le nombre de colonnes de la première matrice est égal au
 
 La matrice résultat aura autant de lignes que la première matrice et autant de colonnes que la seconde.
 
-Le calcul matriciel n'est pas commutatif : N x M différent de M x N
+Le produit matriciel est possible dans les "2 sens" mais il n'est pas commutatif : N x M différent de M x N
 Sauf avec une matrice identité ou une matrice nulle.
 ![](produitmatriciel.png)
 
@@ -170,7 +186,7 @@ Dérivation : étude des variations en un point
 Cela n'as pas de sens d'étudier les variation sur un point.
 Soit une courbe qui représente un déplacement, temps en abscisse, distance en ordonnée
 
-**Dérivé selon Leibnitz**
+**Dérivé selon Leibniz**
 On veut signifier un changement infiniment petit d'une quantité t :
 un tout petit peu plus de t = dt (notation de Leibnitz)
 un tout petit peu plus de f = df
