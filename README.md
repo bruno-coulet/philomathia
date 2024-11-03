@@ -6,6 +6,7 @@ fois :
 
 # Table des matières
 
+[Définitions courtes](#Définitionscourtes)
 1. [Vecteur](#vecteur)
 2. [Matrice](#matrice)
 3. [Probabilité et Loi de probabilité](#probabilité-et-loi-de-probabilité)
@@ -20,6 +21,61 @@ fois :
 12. [Dérivée](#dérivée)
 
 ---
+
+## Définitions courtes
+
+**Vecteur**
+
+Liste ordonnée de nombres, représentant souvent des points dans un espace multidimensionnel.
+
+**Matrice**
+
+Tableau rectangulaire de nombres organisés en lignes et colonnes, utilisé pour les opérations linéaires.
+
+**Probabilité, loi de probabilité**
+
+Mesure de la chance qu'un événement se produise ; la loi de probabilité décrit toutes les probabilités possibles d'un ensemble d'événements.
+
+**Variables indépendantes**
+
+Variables sans relation directe entre elles ; la variation de l'une n'affecte pas la variation de l'autre.
+
+**Espérance, variance et écart type**
+
+   - **Espérance** : Moyenne théorique des valeurs d'une variable.
+   - **Variance** : Mesure de la dispersion autour de la moyenne.
+   - **Écart type** : Racine carrée de la variance, indiquant la dispersion autour de la moyenne.
+
+**Corrélation linéaire**
+
+Mesure de la relation linéaire entre deux variables ; elle varie de -1 (corrélation inverse) à +1 (corrélation directe).
+
+**Moyenne, médiane, maximum, minimum**
+   - **Moyenne** : Somme des valeurs divisée par leur nombre.
+   - **Médiane** : Valeur centrale d'un ensemble trié.
+   - **Maximum** : Plus grande valeur.
+   - **Minimum** : Plus petite valeur.
+
+**Quartiles en statistique**
+
+Valeurs qui divisent un ensemble de données en quatre parties égales.
+
+**Boxplot en statistique**
+
+Diagramme qui résume la distribution des données en affichant les quartiles et les valeurs extrêmes.
+
+**Histogramme en statistique**
+
+Graphique montrant la répartition des données en regroupant les valeurs en classes.
+
+**Théorème central limite**
+
+Théorème indiquant que la somme de variables aléatoires indépendantes suit une distribution normale lorsque le nombre de variables est suffisamment grand.
+
+**Dérivée**
+
+Mesure de la variation instantanée d'une fonction ; représente le taux de changement d'une variable par rapport à une autre.
+
 
 ## Vecteur
 
