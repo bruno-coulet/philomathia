@@ -215,11 +215,84 @@ Définition et explication des variables indépendantes dans le cadre des probab
 Formules et interprétations de l'espérance, de la variance et de l'écart type d'une distribution.
 
 
+
 ## Corrélation linéaire
 Présentation de la corrélation linéaire, du coefficient de corrélation et de leur interprétation.
 
+### Corrélation Linéaire de Pearson
+Coefficient de Corrélation de Pearson
+est une mesure de la corrélation linéaire entre deux variables.
+
+Il est noté $𝑟$ et varie entre -1 et 1
+
+$r >0 $  : Corrélation positive (lorsque l'une des variables augmente, l'autre tend à augmenter aussi).
+
+$r<0$ : Corrélation négative (lorsque l'une des variables augmente, l'autre tend à diminuer).
+
+#### $r = 1$
+Corrélation linéaire positive parfaite
+Les variables augmentent ensemble de manière linéaire.
+
+
+#### $r = 0$
+Aucune corrélation linéaire
+Les variables sont indépendantes ou la relation n'est pas linéaire.
+
+
+#### $r = −1$
+Corrélation linéaire négative parfaite
+Lorsque l'une des variables augmente, l'autre diminue de manière linéaire.
+
+
+#### Interprétation de la force de la corrélation :
+
+$∣r∣$ est la valeur absolue du coefficient de corrélation, donc :
+- toujours positive.
+- mesure uniquement la force de la relation sans tenir compte de la direction.
+
+- $∣r∣=1$
+  relation linéaire parfaite (positive ou négative).
+
+- $∣r∣$ proche de 0
+  relation linéaire faible ou nulle, quelle que soit la direction.
+
+
+
+#### La fonction Pandas `corr()`crée une matrice de corrélation
+Chaque cellule représente le coefficient de corrélation de Pearson entre deux variables. La valeur de la corrélation varie entre -1 et 1 :
+1 : Corrélation positive parfaite (les variables augmentent ensemble).
+0 : Aucune corrélation linéaire.
+-1 : Corrélation négative parfaite (lorsque l'une augmente, l'autre diminue).
+
+
+#### Limites du coefficient de Pearson :
+- N’indique pas une causalité mais simplement une association linéaire.
+- Ne fonctionne bien que pour des relations linéaires.
+- Si la relation entre les variables est non linéaire, Pearson pourrait donner 
+r≈0, même si les variables sont fortement liées (par exemple, relation quadratique).
+
+Exemple
+Supposons que deux variables, x et y, soient liées de façon linéaire. Si leur coefficient de corrélation de Pearson est 0,9, cela indique une relation linéaire positive forte, où des augmentations de x sont généralement associées à des augmentations de y.
+
+
+#### Autres coefficients de corrélation
+Pour capturer des relations non linéaires ou pour des types de données différents :
+
+- **Corrélation de Spearman** : Utilisée pour mesurer la corrélation monotone (ordre des valeurs) entre deux variables, adaptée aux distributions non normales.
+
+- **Corrélation de Kendall** : Utilisée pour mesurer la corrélation entre deux variables ordinales.
+
+
+
+
 ## Moyenne, Médiane, Maximum, Minimum
 Définitions des mesures de tendance centrale et des valeurs extrêmes.
+
+- count : Le nombre de valeurs non nulles dans chaque colonne.
+- mean : La moyenne des valeurs, utile pour voir les valeurs centrales.
+- std : L'écart-type, qui indique la dispersion des données autour de la moyenne.
+- min et max : Les valeurs minimum et maximum, montrent l'étendue des valeurs.
+- Les quartiles 25%, 50% (médiane), 75% : donnent une idée de la distribution des données.
 
 ## Quartiles en statistique
 Explication des quartiles, de leur calcul et de leur rôle dans la description des données.
