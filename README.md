@@ -169,7 +169,7 @@ $$c_{ij} = \sum_{k=1}^{n}a_{ik} \cdot b_{kj} $$
 **Explications**
 | Symbole | Signification | Représentation mathématique |
 |---------|---------------|---------------------------|
-| Σ | Somme | $$\sum$$ |
+| Σ (sigma) | Somme | $$\sum$$ |
 | Σ avec limites | Somme pour k allant de 1 à n | $$ \sum_{k=1}^{n}$$ |
 
 
