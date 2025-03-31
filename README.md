@@ -151,7 +151,7 @@ array([[1, 2],
 
 |Addition de matrices|Multiplication de matrices|
 |:-:|:-:| 
-|\[A + B\]|\[A B\]|
+|\[A + B\]|\[A \times B\]|
 |\(A\) et \(B\) <br>ont les mêmes dimensions|le nombre de colonnes de \(A\) <br>doit être égal<br>au nombre de lignes de \(B\)|
 
 Une matrice \( \boldsymbol{A} \) de dimensions \(m \times n\) peut transformer un vecteur \( \boldsymbol{x} \) en un autre vecteur \(\ \boldsymbol{A x} \).
