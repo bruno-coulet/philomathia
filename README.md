@@ -1,12 +1,9 @@
 # philomathia
 Veille sur les Mathématiques
 
-Définition simple des notions suivantes avec au moins un exemple à chaque
-fois :
+**Table des matières**
 
-# Table des matières
-
-[Définitions courtes](#Définitionscourtes)
+0. [Définitions courtes](#Définitionscourtes)
 1. [Vecteur](#vecteur)
 2. [Matrice](#matrice)
 3. [Probabilité et Loi de probabilité](#probabilité-et-loi-de-probabilité)
@@ -34,33 +31,32 @@ Tableau rectangulaire de nombres organisés en lignes et colonnes, utilisé pour
 
 **Probabilité, loi de probabilité**
 
-Mesure de la chance qu'un événement se produise ; la loi de probabilité décrit toutes les probabilités possibles d'un ensemble d'événements.
+Mesure de la chance qu'un événement se produise, décrit toutes les probabilités possibles d'un ensemble d'événements.
 
 **Variables indépendantes**
 
-Variables sans relation directe entre elles ; la variation de l'une n'affecte pas la variation de l'autre.
+Variables sans relation directe entre elles.<br> La variation de l'une n'affecte pas la variation de l'autre.
 
-**Espérance, variance et écart type**
 
-   - **Espérance** : Moyenne théorique des valeurs d'une variable.
+**Espérance**
+Moyenne théorique des valeurs d'une variable.
 
- - **Variance** : Mesure de la dispersion autour de la moyenne. c'est la moyenne des carrés des écarts à la moyenne :
+**Variance**
+Mesure de la dispersion autour de la moyenne. c'est la moyenne des carrés des écarts à la moyenne :
 
-$\text{Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2$
 
-où :
-
- $x_i$ sont les valeurs des données,
-
- $\bar{x}$ est la moyenne des données,
-
- $n$ est le nombre total d'observations.
+|$\text{Var}(X)$|$$\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2$$|
+|-|-|
+|$x_i$ | les valeurs des données|
+| $\bar{x}$ | la moyenne des données|
+|$n$ | le nombre total d'observations|
 
 
 Une variance élevée signifie que les valeurs sont très dispersées autour de la moyenne, tandis qu’une variance faible indique que les valeurs sont proches de la moyenne.
 
   
-   - **Écart type** : Racine carrée de la variance, indiquant la dispersion autour de la moyenne.
+**Écart type**
+Racine carrée de la variance, indiquant la dispersion autour de la moyenne.
 
 **Corrélation linéaire**
 
@@ -92,34 +88,45 @@ Théorème indiquant que la somme de variables aléatoires indépendantes suit u
 
 Mesure de la variation instantanée d'une fonction ; représente le taux de changement d'une variable par rapport à une autre.
 
+---
 
 ## Vecteur
 
-### En mathématiques, un vecteur peut être défini de plusieurs façons :
+#### En mathématiques, un vecteur peut être défini de plusieurs façons :
 
-1. Représentation géométrique :
-Un vecteur est une quantité ayant une longueur, une direction et un sens.
-Il est représenté par une flèche allant d'un point à un autre.
+1. **Géométrie**
+Quantité ayant une longueur, une direction et un sens.
+Représenté par une flèche allant d'un point à un autre.
+<br>
+2. **Liste ordonnée de nombres**
+Liste ordonnée de nombres réels.
+Notée sous forme de colonne ou de ligne : (x1,x2,...,xn)
+<br>
+3. **Algèbre linéaire : Élément d'un espace vectoriel**
+Elément d'un espace vectoriel.
+Obéit à certaines propriétés comme l'addition vectorielle et la multiplication scalaire.
 
-2. Liste ordonnée de nombres :
-Un vecteur peut être vu comme une liste ordonnée de nombres réels, généralement notée sous forme de colonne ou de ligne.
-Par exemple :(x1,x2,...,xn)
+#### En statistique
 
-3. Élément d'un espace vectoriel : En algèbre linéaire, un vecteur est un élément d'un espace vectoriel, qui obéit à certaines propriétés comme l'addition vectorielle et la multiplication scalaire.
-
-### Un vecteur en statistique
-
-1. Représenter des échantillons : Un vecteur peut contenir les observations d'une variable particulière pour un ensemble d'individus.
-
-2. Stocker des variables multiples : Plusieurs caractéristiques d'un même individu peuvent être regroupées dans un vecteur.
+1. Représente de échantillons :
+Un vecteur peut contenir les observations d'une variable particulière pour un ensemble d'individus.
+<br>
+2. Stocke des variables multiples :
+Plusieurs caractéristiques d'un même individu peuvent être regroupées dans un vecteur.
 
 ## Matrice
 
-Définition d'une matrice et son utilisation dans les calculs statistiques.
+Une matrice est une structure de données bidimensionnelle, disposés en lignes et colonnes.
+Les matrices peuvent représenter des transformations linéaires, c'est-à-dire des opérations qui transforment un vecteur d'un espace vectoriel en un autre.<br>
+
+En statistiques, elle peut représenter :
+
+- Un ensemble d'observations sur plusieurs variables
+- Des données structurées pour l'analyse multivariée
+- Des coefficients pour des systèmes d'équations
 
 
-
-### Matrice avec Numpy
+#### Matrice avec Numpy
 
 Il y a plusieurs méthodes pour créer une matrice avec python :
 
@@ -133,26 +140,30 @@ C = np.matrix('[1,2;3,4]', dtype=np.int32)
 D = np.array([np.arange(1,3), np.arange(3,5)])
 
 E = np.arange(1,5).reshape(2,2)
+
+>>>
+array([[1, 2],
+       [3, 4]])
 ```
 
+### Calcul matriciel
 
-### Définition d'une matrice
 
-Une matrice est une structure de données bidimensionnelle, disposés en lignes et colonnes.
-C'est donc une grille rectangulaire de nombres organisée en lignes et colonnes. Les matrices peuvent représenter des transformations linéaires, c'est-à-dire des opérations qui transforment un vecteur d'un espace vectoriel en un autre. Par exemple, une matrice \(A\) de dimensions \(m \times n\) peut transformer un vecteur \(x\) en un autre vecteur \(A x\).
+|Addition de matrices|Multiplication de matrices|
+|:-:|:-:| 
+|\[A + B\]|\[A B\]|
+|\(A\) et \(B\) <br>ont les mêmes dimensions|le nombre de colonnes de \(A\) <br>doit être égal<br>au nombre de lignes de \(B\)|
 
-**Addition de matrices** : 
-\[
-A + B
-\]
-où \(A\) et \(B\) ont les mêmes dimensions.
+Une matrice \( \boldsymbol{A} \) de dimensions \(m \times n\) peut transformer un vecteur \( \boldsymbol{x} \) en un autre vecteur \(\ \boldsymbol{A x} \).
 
-**Multiplication de matrices** :
-\[
-A B
-\]
-où le nombre de colonnes de \(A\) doit être égal au nombre de lignes de \(B\).
 
+Le produit matriciel n'est possible que si le nombre de colonnes de la première matrice est égal au nombre de lignes de la seconde
+
+La matrice résultat aura autant de lignes que la première matrice et autant de colonnes que la seconde.
+
+Le produit matriciel</font> est possible dans les "2 sens"<br> mais il n'est <font color="orange">pas commutatif</font> $ N \times M \neq M \times N $ <font color="orange">sauf avec une matrice identité ou une matrice nulle</font>
+<br>
+![](produitmatriciel.png) 
 
 
 **Multiplication entre une matrice et un vecteur colonne**
@@ -174,7 +185,7 @@ où le nombre de colonnes de \(A\) doit être égal au nombre de lignes de \(B\)
 
 
 
-La multiplication \( \boldsymbol{X} \times \boldsymbol{x} \) se fait en calculant les produits scalaires de chaque ligne de la matrice \( \boldsymbol{X} \) avec le vecteur \( \boldsymbol{v} \).
+La multiplication \( \boldsymbol{X} \times \boldsymbol{v} \) se fait en calculant les produits scalaires de chaque ligne de la matrice \( \boldsymbol{X} \) avec le vecteur \( \boldsymbol{v} \).
 
 ### \( \boldsymbol{X} \times \boldsymbol{v} \) :
 
@@ -197,21 +208,17 @@ x_{31} \cdot v_1 + x_{32} \cdot v _2
 - Le **vecteur colonne \( \boldsymbol{x} \)** a 2 éléments.
 - La multiplication génère un **vecteur colonne** résultant de 3 éléments.
 
-Cela montre que **la multiplication d'une matrice \( \boldsymbol{X} \) de taille \( m \times n \) par un vecteur colonne \( \boldsymbol{x} \) de taille \( n \times 1 \)** donne un **vecteur colonne** de taille \( m \times 1 \).
+Cela montre que **la multiplication d'une matrice \( \boldsymbol{X} \) de taille \( m \times n \) par un vecteur colonne \( \boldsymbol{v} \) de taille \( n \times 1 \)** donne un **vecteur colonne** de taille \( m \times 1 \).
 
-### Résultat final :
-\[
-\boldsymbol{X} \times \boldsymbol{x} = \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix}
+**Résultat final :**
+\[\boxed{
+\boldsymbol{X} \times \boldsymbol{v} = \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix}}
 \]
 où chaque \( y_i \) représente le produit scalaire entre la \(i\)-ème ligne de \( \boldsymbol{X} \) et le vecteur \( \boldsymbol{x} \).
 
 ---
 
-En statistiques, elle peut représenter :
 
-- Un ensemble d'observations sur plusieurs variables
-- Des données structurées pour l'analyse multivariée
-- Des coefficients pour des systèmes d'équations
 
 ### Utilisation dans les calculs statistiques
 
@@ -221,28 +228,19 @@ En statistiques, elle peut représenter :
 - Modélisation statistique
 - Inférence statistique
 
-### Calcul matriciel
-n'est possible que si le nombre de colonnes de la première matrice est égal au nombre de lignes de la seconde
+---
+**Produit matriciel - version 1 :**
 
-La matrice résultat aura autant de lignes que la première matrice et autant de colonnes que la seconde.
+$$\boxed{c_{ij} = \sum_{k=1}^{n}a_{ik} \cdot b_{kj} }$$
 
-Le produit matriciel est possible dans les "2 sens" mais il n'est pas commutatif : N x M différent de M x N
-Sauf avec une matrice identité ou une matrice nulle.
-![](produitmatriciel.png)
 
-**Produit matriciel**
-
-**version 1 :**
-$$c_{ij} = \sum_{k=1}^{n}a_{ik} \cdot b_{kj} $$
-
-**Explications**
 | Symbole | Signification | Représentation mathématique |
 |---------|---------------|---------------------------|
 | Σ | Somme | $$\sum$$ |
 | Σ avec limites | Somme pour k allant de 1 à n | $$ \sum_{k=1}^{n}$$ |
 
 
-**Version 2 :**
+**Produit matriciel - version 1 :**
 $$c_{ij}  = a_{i1} \cdot b_{1j} + a_{i2} \cdot b_{2j} + \cdots + a_{in} \cdot b_{nj}$$
 
 ### Matrice identité
@@ -252,11 +250,12 @@ $$ \begin{pmatrix}
 0 & 0 & 1
 \end{pmatrix}$$
 
-La multiplication d'une matrice par une matrice identité retourne la matrice originale.
-Le produit scalaire avec une matrice identité est commutatif.
+- La **multiplication d'une matrice** par une **matrice identité** <font color="orange">retourne la matrice originale</font>.
+
+- Le **produit scalaire** avec une **matrice identité** est <font color="orange">commutatif</font>.
 
 ### Matrice inverse et déterminant
-Matrice
+
 $$ M = \begin{pmatrix}
 a & b \\
 c & d
